@@ -9,10 +9,17 @@ app.use(cors());
 dotenv.config();
 
 
-app.listen(5000, () => {
-    console.log("Server is running on port 5000");
+app.listen(4000, () => {
+    console.log("Server is running on port 4000");
 });
 
+app.get("/", (req, res) =>{
+    res.json({ message: "This is the root route"})
+})
+
+const dbConnectionString = process.env.DATABASE_URL
+
+export const db = new pg.Pool({connestionString: dbConnectionString})
 
 //Import packages
 //Start or configure packages
