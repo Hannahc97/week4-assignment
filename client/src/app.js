@@ -19,7 +19,7 @@ function handleSubmitGuestbookForm (event){
       body: JSON.stringify({formValues})
     });
   console.log(formValues) 
-  viewGuestbook()
+  // viewGuestbook()
 }
 
 guestbookForm.addEventListener("submit", handleSubmitGuestbookForm);

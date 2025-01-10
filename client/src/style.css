@@ -1,1 +1,40 @@
 /* Remember media queries */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: paleturquoise;
+    font-family: quicksand, serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    /* align-content: space-evenly; */
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.form-container{
+    font-size: 1.5rem;
+}
+button{
+    font-size: 1.5rem;
+    background-color: indianred;
+}
+
+/* h2 {
+    padding: 20px;
+} */
+
+.comment{
+    padding: 20px;
+    border: solid red;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin: 10px;
+}

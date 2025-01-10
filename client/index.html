@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./src/app.js" defer></script>
     <title>Vite App</title>
@@ -10,26 +11,29 @@
   <body>
     <h1>Guestbook</h1>
     <!-- I need to build a form in here -->
-    <form id="guestbook-form">
-      <label for="name">Name</label> <br>
-      <input type="text" id="name" name="name" required><br>
+    <div class="container">
+      <div class="form-container">
+        <form id="guestbook-form">
+          <label for="name">Name</label> <br>
+          <input type="text" id="name" name="name" required><br>
 
-      <label for="name">Where are you from?</label> <br>
-      <input type="text" id="origin" name="origin" required><br>
+          <label for="name">Where are you vacationing from? 🏠</label> <br>
+          <input type="text" id="origin" name="origin" required><br>
 
-      <label for="name">What would you rate your stay out of 5? ⭐️</label> <br>
-      <input type="number" id="rating" name="rating" min="1" max="5" required><br>
+          <label for="name">Out of 5, how would you rate your stay? ⭐️</label> <br>
+          <input type="number" id="rating" name="rating" min="1" max="5" required><br>
 
-      <label for="name">Please tell us about your experience staying with us: </label><br>
-      <textarea id="comment" name="comment" required></textarea> <br>
+          <label for="name">Please tell us about your experience staying with us: 🏝️ </label><br>
+          <textarea id="comment" name="comment" required></textarea> <br>
 
-      <button type="submit">Submit!</button>
-    </form>
-
-    <h2>Comments</h2>
-    <div id="comments-container">
-
-
-    </div>
+          <button type="submit">Submit!</button>
+        </form>
+      </div>
+  
+      
+      <div id="comments-container">
+        <h2>Comments</h2>
+      </div>
+  </div>
   </body>
 </html>

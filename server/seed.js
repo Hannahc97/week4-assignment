@@ -44,3 +44,8 @@ import { db } from "./server.js"
 // db.query(
 //     `DELETE FROM guestbook WHERE id = 5;`
 // );
+
+db.query(
+    `DELETE FROM guestbook WHERE id between 11 and 18;`
+);
+
