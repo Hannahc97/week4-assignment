@@ -1,13 +1,11 @@
 // The main purpose is to handle the data from the form 
 
 // Select the form from the dom 
-
 const guestbookForm = document.getElementById("guestbook-form");
 
 // We need to build an event that handles the data from the form
 // event handler
 // event listener 
-
 function handleSubmitGuestbookForm (event){
   event.preventDefault();
   const formData = new FormData(guestbookForm);
@@ -20,29 +18,14 @@ function handleSubmitGuestbookForm (event){
       headers: {"Content-type": "application/json",},
       body: JSON.stringify({formValues})
     });
-
   console.log(formValues) 
+  viewGuestbook()
 }
+
 guestbookForm.addEventListener("submit", handleSubmitGuestbookForm);
 
-// The same way as we fetch the POST route, we also need to fetch the GET route, so we can display the data from the database on the DOM 
-// app.get("/", async (req, res) => { 
-//   const response = await fetch("http://localhost:4000/comments")
-//   const data = await response.json()
-//   // res.json() sends this array back to the client as a JSON response.
-//   // res.json(data.comment)
-//   const commentsContainer = document.getElementById("comments-container");
-//   data.forEach((comment) => {
-//     const commentElement = document.createElement("div");
-//     commentElement.className = "comment";
-//     comment.guest_name
-//     comment.guest_origin
-//     comment.rating
-//     comment.comment
-//     commentsContainer.appendChild(commentElement)
-//   })
-// });
 
+// The same way as we fetch the POST route, we also need to fetch the GET route, so we can display the data from the database on the DOM 
 async function viewGuestbook (){
   const response = await fetch("http://localhost:4000/comments")
   const data = await response.json()
