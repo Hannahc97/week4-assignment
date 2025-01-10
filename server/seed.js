@@ -15,8 +15,20 @@ import { db } from "./server.js"
 //     comment VARCHAR(255))`
 // );
 
-db.query(
-    `INSERT INTO guestbook (guest_name, guest_from, rating, comment)
-    VALUES
-    ('Hannah', 'England', 5, 'Had a lovely stay at the hotel!')`
-);
+// db.query(
+//     `INSERT INTO guestbook (guest_name, guest_from, rating, comment)
+//     VALUES
+//     ('Hannah', 'England', 5, 'Had a lovely stay at the hotel!')`
+// );
+
+// db.query(
+//     `INSERT INTO guestbook (guest_name, guest_from, rating, comment)
+//     VALUES
+//     ('Nish', 'Australia', 5, 'Very hospitable and great food!')`
+// );
+
+// db.query(
+//     `INSERT INTO guestbook (guest_name, guest_from, rating, comment)
+//     VALUES
+//     ('Khush', 'Hong Kong', 5, 'Lovely rooms and big pool!')`
+// );
