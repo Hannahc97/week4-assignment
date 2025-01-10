@@ -32,3 +32,7 @@ import { db } from "./server.js"
 //     VALUES
 //     ('Khush', 'Hong Kong', 5, 'Lovely rooms and big pool!')`
 // );
+
+db.query(
+    `DELETE FROM guestbook WHERE guest_name='NULL';`
+);

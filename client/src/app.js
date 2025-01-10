@@ -26,17 +26,36 @@ function handleSubmitGuestbookForm (event){
 guestbookForm.addEventListener("submit", handleSubmitGuestbookForm);
 
 // The same way as we fetch the POST route, we also need to fetch the GET route, so we can display the data from the database on the DOM 
-
-// app.get("/comments", async (req, res) => { 
-
+// app.get("/", async (req, res) => { 
 //   const response = await fetch("http://localhost:4000/comments")
 //   const data = await response.json()
 //   // res.json() sends this array back to the client as a JSON response.
 //   // res.json(data.comment)
 //   const commentsContainer = document.getElementById("comments-container");
-//   comments.forEach((comment) => {
+//   data.forEach((comment) => {
 //     const commentElement = document.createElement("div");
 //     commentElement.className = "comment";
-
+//     comment.guest_name
+//     comment.guest_origin
+//     comment.rating
+//     comment.comment
+//     commentsContainer.appendChild(commentElement)
 //   })
 // });
+
+async function viewGuestbook (){
+  const response = await fetch("http://localhost:4000/comments")
+  const data = await response.json()
+  const commentsContainer = document.getElementById("comments-container");
+  data.forEach((comment) => {
+    const commentElement = document.createElement("div");
+    commentElement.className = "comment";
+    commentElement.innerHTML = `
+    <p> Name: ${comment.guest_name} </p>
+    <p> Vacationing from: ${comment.guest_from} </p>
+    <p> Rating: ${comment.rating}/5 </p>
+    <p> Comment: ${comment.comment} </p>` 
+    commentsContainer.appendChild(commentElement)
+  })
+}
+document.addEventListener("DOMContentLoaded", viewGuestbook);
