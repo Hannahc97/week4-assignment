@@ -26,6 +26,7 @@ function handleSubmitGuestbookForm (event){
 }
 guestbookForm.addEventListener("submit", handleSubmitGuestbookForm);
 
+
 // The same way as we fetch the POST route, we also need to fetch the GET route, so we can display the data from the database on the DOM 
 
 async function viewGuestbook (){

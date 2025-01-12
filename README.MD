@@ -28,6 +28,9 @@ https://www.w3schools.com/tags/tag_textarea.asp
 https://www.w3schools.com/jsref/jsref_foreach.asp
 https://www.w3schools.com/sql/sql_delete.asp
 https://www.youtube.com/watch?v=1UsllDMhvN4&ab_channel=dcode
+I also used this video and resources to help me with an alert message for when the form is submitted using the setTimeout function
+https://www.youtube.com/watch?v=shWr5DNVeCI&ab_channel=BroCode
+https://www.w3schools.com/jsreF/met_win_alert.asp
 
 What errors or bugs did you encounter while completing your assignment? How did you solve them?
 Sometimes my SQL queries would come up with an error because I got the syntax error. Also when trying to send data from the server to the database I got a few bugs but got some help from Manny. I had some bugs during the forEach loop but after some trial and error and checking my previous projects I was able to fix it. When trying to display the data dynamically I inserted a lot of data into the form to see if it would be shown on the webpage or not, therefore in my table I had a lot of dummy data and the ID's went over 70, however I deleted all the test data and kept the realistic data. 
