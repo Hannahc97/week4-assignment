@@ -2,13 +2,15 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: paleturquoise;
-    font-family: quicksand, serif;
+    box-sizing: border-box;
+    background-color: #E195AB;
+    font-family: roboto flex, serif;
 }
 
 h1 {
     text-align: center;
     padding: 10px;
+    font-size: 2.5rem;
 }
 
 .container{
@@ -17,6 +19,7 @@ h1 {
     /* align-content: space-evenly; */
     justify-content: space-evenly;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .form-container{
@@ -24,17 +27,86 @@ h1 {
 }
 button{
     font-size: 1.5rem;
-    background-color: indianred;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #FFCCE1;
 }
 
-/* h2 {
-    padding: 20px;
-} */
+button:hover {
+    background-color: #F2F9FF;
+}
 
+#guestbook-form {
+    padding: 10px;
+    background-color: #FFF5D7;
+    border-radius: 5px;
+
+}
+
+label {
+    background-color: #FFF5D7;
+}
+input{
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+textarea{
+    background-color: white;
+    height: 50px;
+    width: 500px;
+    padding: 5px;
+    border-radius: 5px;
+}
 .comment{
     padding: 20px;
-    border: solid red;
-    border-radius: 20px;
+    border: #FFF5D7;
+    border-radius: 5px;
     font-size: 1rem;
-    margin: 10px;
+    margin-top: 10px;
+    background-color: #FFF5D7;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    background-color: #FFF5D7;
+}
+
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .form-container{
+        font-size: 1rem;
+    }
+    input{
+        padding: 2px;
+        border-radius: 4px;
+        height: 20px;
+    }
+    textarea{
+        height: 25px;
+        width: 300px;
+        padding: 4px;
+        border-radius: 5px;
+    }
+    button{
+        font-size: 1rem;
+        padding: 2px;
+        border-radius: 5px;
+    }
+    .comment{
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
 }
