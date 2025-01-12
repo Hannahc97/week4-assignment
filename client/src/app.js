@@ -40,10 +40,10 @@ async function viewGuestbook (){
     const userRating = document.createElement("p");
     const userComment = document.createElement("p");
     
-    userName.textContent = `Name: ${comment.guest_name}`;
-    userFrom.textContent = `Vacationing from: ${comment.guest_from}`;
-    userRating.textContent = `Rating: ${comment.rating}/5`;
-    userComment.textContent = `Comment: ${comment.comment}`;
+    userName.textContent = `Name 😊: ${comment.guest_name}`;
+    userFrom.textContent = `Vacationing from 🏠: ${comment.guest_from}`;
+    userRating.textContent = `Rating ⭐️: ${comment.rating}/5`;
+    userComment.textContent = `Comment 🗒️: ${comment.comment}`;
 
     commentElement.appendChild(userName);
     commentElement.appendChild(userFrom);

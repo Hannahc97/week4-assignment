@@ -45,7 +45,13 @@ import { db } from "./server.js"
 //     `DELETE FROM guestbook WHERE id = 5;`
 // );
 
+// db.query(
+//     `DELETE FROM guestbook WHERE id between 11 and 18;`
+// );
+
 db.query(
-    `DELETE FROM guestbook WHERE id between 11 and 18;`
+    `INSERT INTO guestbook (guest_name, guest_from, rating, comment)
+    VALUES
+    ('Tia', 'Thailand', 1, 'I asked for a sea view room but instead got a pool view room :(')`
 );
 
