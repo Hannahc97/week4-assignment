@@ -33,8 +33,10 @@ export const db = new pg.Pool({
 //I need a route to READ data from the database
 
 app.get("/comments", async (req, res) => {
-    const query = await db.query(`SELECT * FROM guestbook`);
-    await res.json(query.rows);
+    const query = await db.query(`SELECT * FROM week4_guestbook ORDER BY id DESC`);
+    res.json(query.rows);
+
+    // I fixed it in the front end but to view the comments in desc ord I could put 'SELECT * FROM week4_guestbook ORDER BY id DESC'
 });
 
 
@@ -43,7 +45,7 @@ app.get("/comments", async (req, res) => {
 app.post("/new-data", async(req, res) =>{
     console.log("Request body:", req.body);
     const data = req.body;
-    const query = await db.query(`INSERT INTO guestbook (guest_name, guest_from, rating, comment) VALUES($1, $2, $3, $4)`, [data.formValues.name, data.formValues.origin, data.formValues.rating, data.formValues.comment]); // Ensure the req.body fields match your frontend fields (name, origin, rating, and comment).
+    const query = await db.query(`INSERT INTO week4_guestbook (guest_name, guest_from, rating, comment) VALUES($1, $2, $3, $4)`, [data.formValues.name, data.formValues.origin, data.formValues.rating, data.formValues.comment]); // Ensure the req.body fields match your frontend fields (name, origin, rating, and comment).
     await res.json({
         message: "The data was added successfully", 
         data: query.rows})
