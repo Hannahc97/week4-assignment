@@ -45,7 +45,7 @@ async function handleSubmitGuestbookForm (event){
   try {
     // The server url should be your local host while you are developing 
     //! When you finish you should replace it with your RENDER server url 
-    const response = await fetch("http://localhost:4000/new-data", { //the client is trying to send a POST request to the /new-data route on the backend server 
+    const response = await fetch("https://week4-assignment-w63z.onrender.com/new-data", { //the client is trying to send a POST request to the /new-data route on the backend server 
       method: "POST",
       headers: {"Content-type": "application/json",},
       body: JSON.stringify({formValues})
@@ -93,7 +93,7 @@ guestbookForm.addEventListener("submit", handleSubmitGuestbookForm);
 async function viewGuestbook (){
 
   try{
-      const response = await fetch("http://localhost:4000/comments")
+      const response = await fetch("https://week4-assignment-w63z.onrender.com/comments")
       const data = await response.json()
 
       data.forEach((comment) => {
