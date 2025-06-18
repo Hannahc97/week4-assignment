@@ -37,3 +37,19 @@ Sometimes my SQL queries would come up with an error because I got the syntax er
 
 What went really well and what could have gone better?
 I like how I was able to make a fullstack app. I enjoyed how I started to see how everything connected with each other such as the client to the server and server to db and vice versa. I think if I knew how to display the data from the form dynamically that would've made my app better. 
+
+
+## Update:
+- As Supabase pauses projects after 90 days I had to create a new project and database again as I want this to be deployed so I can access it again. 
+- Whilst sorting this out, I thought why not fix one of the issues I had, which was displaying the comments dynamically.
+    - So I did this and with some help with Claude, I made a function that created a comment `createComment` (I more or less copied everything from the `viewGuestbook` function to a new function that just focused on creating a new comment div).
+    - Then in the `handleSubmitGuestbookForm` function I created an object that creates a new comment based of the form values
+    - I pass the new comment object into the `createComment` function which I assign as a variable. 
+        - This is basically creating a new comment element when the user submits their comment in the form. 
+    - As I would like that comment to appear at the top (newest to oldest comments), I use `insertBefore`, which appends the new comment element to the top in the `commentsContainer` div. 
+    - I added a `guestbookForm.reset();` which clears the form when a comment has been submitted and added an alert after so the user knows it has been successful. 
+    - I also put all of this in a try, catch block (I do want to get used to adding this in my code).
+    - The `viewGuestbook` function only focuses on displaying the data and the `forEach` loop goes through each comment and passes the comment in the `createComment` function. 
+        - This is creating the comment (creating the element, adding text etc)
+    - This is stored as a variable and that `commentElement` variable is appended to the `commentsContainer`, it does this one by one for each comment. 
+- I could've added PUT or DELETE requests but I wanted to apply these request to my other projects. 
